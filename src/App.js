@@ -1,42 +1,37 @@
 import { useState } from 'react'
+import { Box, BoxDois } from './components'
 import './App.css'
-
-const Input = ({ onChange, type, name, placeholder }) => {
-  return (
-    <input 
-      onChange={onChange}
-      name={name}
-      type={type} 
-      placeholder={placeholder} />)
-}
 
 export const App = () => {
 
-  const [info, setInfo] = useState({ nome: '', email: '', senha: '' })
-  
-  console.log(info)
+  // const [info, setInfo] = useState({ nome: '', email: '', senha: '' })
 
-  const handleChange = (e) => { 
-    const { name, value } = e.target
-    setInfo({ ...info, [name]: value })
+  // const handleChange = (e) => { 
+  //   const { name, value } = e.target
+  //   setInfo({ ...info, [name]: value })
+  // }
+
+  const [idade, setIdade] = useState(18)
+
+  const click = () => {
+      setIdade(idade + 1)
   }
   
   return (
-    <div className="app">
-      <Input type="text" name="nome" placeholder="Digite seu nome:" onChange={handleChange} />
-      <Input 
-        type="email" 
-        name="email"
-        placeholder="Digite seu email:" 
-        onChange={handleChange}
-      />
-      
-      <Input 
-        type="password" 
-        name="senha"
-        placeholder="Digite sua senha:" 
-        onChange={handleChange}
-      />
-    </div>
+    <Box>
+      {/* <div className="app">
+        <Message message="ola mundo" type="warning" />
+        <Input type="text" name="nome" placeholder="Digite seu nome:" onChange={handleChange} />
+        <Input type="email" name="email" placeholder="Digite seu email:" onChange={handleChange} />
+        <Input type="password" name="senha" placeholder="Digite sua senha:" onChange={handleChange} />
+      </div> */}
+      <Box color="blue" idade={idade} click={click}>
+        <p>caixa um</p>
+      </Box>
+      <BoxDois color="red" idade={idade} click={click}>
+        <p>caixa dois</p>
+      </BoxDois>
+    </Box>
+
   );
 }

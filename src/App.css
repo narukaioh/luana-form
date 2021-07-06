@@ -1,8 +1,14 @@
+* {
+  background: rgb(19, 19, 19);
+  color: green;
+}
+
 .message {
   border: 1px solid;
   padding: 5px;
   border-radius: 5px;
   text-align: center;
+  border: 1px solid green;
 }
 
 .error {
@@ -28,4 +34,14 @@
 input {
   display: block;
   margin-bottom: 5px;
+  border: 1px solid green;
 }
+
+.red, .blue {
+  border: 1px solid;
+  padding: 20px;
+  text-align: center;
+}
+
+.red { border-color: red}
+.blue { border-color: blue}
