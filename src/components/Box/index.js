@@ -1,10 +1,9 @@
 import { useState } from 'react'
 
-const Box = ({ children, color, idade, click }) => {
+const Box = ({ children, color }) => {
     return (
         <div className={color}>
-            {children} - {idade}
-            <button onClick={click}>clique</button>
+            {children}
         </div>
     )
 }

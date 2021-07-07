@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Box, BoxDois } from './components'
+import { Box } from './components'
 import './App.css'
+import ShoppingCart from './components/ShoppingCart'
 
 export const App = () => {
 
@@ -24,13 +25,14 @@ export const App = () => {
         <Input type="text" name="nome" placeholder="Digite seu nome:" onChange={handleChange} />
         <Input type="email" name="email" placeholder="Digite seu email:" onChange={handleChange} />
         <Input type="password" name="senha" placeholder="Digite sua senha:" onChange={handleChange} />
-      </div> */}
+      </div>
       <Box color="blue" idade={idade} click={click}>
         <p>caixa um</p>
       </Box>
       <BoxDois color="red" idade={idade} click={click}>
         <p>caixa dois</p>
-      </BoxDois>
+      </BoxDois> */}
+      <ShoppingCart />
     </Box>
 
   );
